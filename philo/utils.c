@@ -3,37 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibouiddo <ibouiddo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilbouidd <ilbouidd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 08:33:14 by ilbouidd          #+#    #+#             */
-/*   Updated: 2026/03/26 10:18:31 by ibouiddo         ###   ########.fr       */
+/*   Updated: 2026/04/02 10:10:35 by ilbouidd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int ft_atoi(char *str)
+
+long	ft_atol(const char *nptr)
 {
-	int i;
-	int res;
-	int sign;
+	size_t	i;
+	long	sign;
+	long	res;
 
 	i = 0;
-	res = 0;
 	sign = 1;
-	while (str[i] <= 32)
+	res = 0;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign = sign * (-1);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		res = res * 10 + str[i] - 48;
+		res = res * 10 + nptr[i] - 48;
 		i++;
 	}
-	return (res * sign);
+	return (sign * res);
 }
 

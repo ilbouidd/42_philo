@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibouiddo <ibouiddo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilbouidd <ilbouidd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 20:07:16 by ilbouidd          #+#    #+#             */
-/*   Updated: 2026/03/26 10:19:11 by ibouiddo         ###   ########.fr       */
+/*   Updated: 2026/04/02 10:10:25 by ilbouidd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,15 @@
 typedef struct s_philo
 {
 	int	nb_philo;
+	char	**av;
+	size_t	time_die;
+	size_t	time_eat;
+	size_t	time_sleep;
+	size_t	time_must_eat;
 
 }	t_philo;
 
-int	ft_atoi(char *str);
-int	errors_all(char **av);
+long	ft_atol(const char *nptr);
+int	errors_all(t_philo *philo);
 
 #endif

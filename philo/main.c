@@ -3,26 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibouiddo <ibouiddo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilbouidd <ilbouidd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 20:06:56 by ilbouidd          #+#    #+#             */
-/*   Updated: 2026/03/27 10:29:52 by ibouiddo         ###   ########.fr       */
+/*   Updated: 2026/04/02 10:09:53 by ilbouidd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-#include <stdio.h>
 
 int main(int ac, char **av)
 {
-	t_philo	*philo;
+	t_philo	philo;
 
-	(void)ac;
-	philo = NULL;
-	philo->nb_philo = ft_atoi(av[1]);
 	if (ac !=  5 && ac != 6)
-		return (printf("no good arguments"), 1);
-	printf("%d\n", philo->nb_philo);
-	if (errors_all(av) == 1)
+		return (printf("Error: No good arguments\n"), 1);
+	philo.av = av;
+	if (errors_all(&philo) == 1)
 		return(1);
 }
