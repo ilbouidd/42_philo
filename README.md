@@ -15,7 +15,7 @@ Critical rules:
 
     Respect timings: thinking, eating, sleeping.
 
-## Compilation and Usage:
+#### Compilation and Usage:
 
 ```bash
 make
