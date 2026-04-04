@@ -1,6 +1,7 @@
 SRCS =	main.c		\
 		utils.c		\
 		parsing.c	\
+		start.c		\
 
 CC = cc -Wall -Werror -Wextra
 

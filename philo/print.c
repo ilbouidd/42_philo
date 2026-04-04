@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilbouidd <ilbouidd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/24 08:33:14 by ilbouidd          #+#    #+#             */
-/*   Updated: 2026/04/04 22:04:04 by ilbouidd         ###   ########.fr       */
+/*   Created: 2026/04/03 06:39:33 by ilbouidd          #+#    #+#             */
+/*   Updated: 2026/04/04 22:04:35 by ilbouidd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-long	ft_atoi_philo(const char *nptr)
-{
-	size_t	i;
-	long	res;
-
-	i = 0;
-	res = 0;
-	if (nptr)
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		res = res * 10 + nptr[i] - 48;
-		if (res > INT_MAX)
-			return (-1);
-		i++;
-	}
-	return (res);
-}
-
+// void	print_value(t_philo *philo, char *str)
+// {
+// 	if (str == "fork")
+// 		printf("%d  has taken a fork");
+// 	else if (str == "eat")
+// 		printf("%d is eating");
+// 	else if (str == "sleep")
+// 		printf("%d is sleeping");
+// 	else if (str == "think")
+// 		printf("%d is thinking");
+// 	else if (str == "die")
+// 		printf("%d died");
+// }

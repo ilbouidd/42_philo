@@ -6,7 +6,7 @@
 /*   By: ilbouidd <ilbouidd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 08:31:29 by ilbouidd          #+#    #+#             */
-/*   Updated: 2026/04/02 10:10:15 by ilbouidd         ###   ########.fr       */
+/*   Updated: 2026/04/04 20:13:54 by ilbouidd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,37 +42,17 @@ static int  no_cara(char **av)
     return (0);
 }
 
-static int just_one_philo(char **av)
-{
-    if (av[1][0] == '1' && av[1][1] == '\0')
-        return (1);
-    else
-        return (0);
-}
-
-static int	zero_in_argument(char **av)
-{
-	int	i;
-
-	i = 1;
-	while (av[i])
-	{
-		if (av[i][0] == '0' && av[i][1] == '\0')
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 int errors_all(t_philo *philo)
 {
 	if (no_cara(philo->av) == 1)
 		return (printf("Error: Caracters in argument\n"), 1);
-    if (just_one_philo(philo->av) == 1)
-        return (printf("Error: just one philo\n"), 1);
-    if (just_one_philo(philo->av) == 1)
-        return (printf("Error: just one philo\n"), 1);
-    if (zero_in_argument(philo->av) == 1)
-        return (printf("Error: zero in argument\n"), 1);
+    if (philo->nb_philo <= 0)
+        return (printf("Error: no good number of philosophers\n"), 1);
+    if (philo->time_die <= 0)
+        return (printf("Error: no good time for die\n"), 1);
+    if (philo->time_eat <= 0)
+        return (printf("Error: no good time for eat\n"), 1);
+    if (philo->time_sleep <= 0)
+        return (printf("Error: no good time for sleep\n"), 1);
     return (0);
 }
