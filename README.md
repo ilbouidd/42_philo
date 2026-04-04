@@ -7,7 +7,7 @@ Philosophers is an 42 School project that simulates the classic "dining philosop
 Dining Problem: 
 Two(or more)philosophers sit at a round table. Between each philosopher is a fork, and in the center, a large bowl of spaghetti. A philosopher must pick up two forks (their left and right ones) to eat. Once satisfied, they put the forks down and go back to thinking or sleeping.
 
-Critical rules:
+#### Critical rules:
 
     A philosopher must never starve (time limit without eating).
 
