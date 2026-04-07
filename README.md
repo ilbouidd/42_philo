@@ -14,6 +14,7 @@ Two(or more)philosophers sit at a round table. Between each philosopher is a for
     Avoid deadlocks (all philosophers blocked waiting).
 
     Respect timings: thinking, eating, sleeping.
+# Instructions
 
 #### Compilation and Usage:
 
@@ -23,3 +24,19 @@ make
 ./philo 5 800 200 200
 ./philo 5 800 200 200 7
 ```
+
+Example of output :
+
+```text
+0 1  has taken a fork
+0 1  is eating
+0 1  is sleeping
+0 1  is thinking
+```
+
+# Resources
+
+## Important Function:
+
+<span style="color:red">pthread_create:</span> create a thread, divide the main thread. Different from fork that duplicates.
+<span style="color:green"></span>int    othread_detach
