@@ -38,5 +38,5 @@ Example of output :
 
 ## Important Function:
 
-<span style="color:red">pthread_create:</span> create a thread, divide the main thread. Different from fork that duplicates.
+<span style="color:red">pthread_create:</span> create a thread, divide the main thread. Different from fork that duplicates. 
 <span style="color:green"></span>int    othread_detach
