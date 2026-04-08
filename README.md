@@ -35,7 +35,7 @@ Example of output :
 ```
 
 # Resources
-
+<span style="color:green">Ce texte est vert !</span>
 ## Important Function:
 
 <span style="color:red"> pthread_create: </span> create a thread, divide the main thread. Different from fork that duplicates. 
